@@ -15,7 +15,7 @@ public class SimpleCaesarDecypherer implements CaesarDecypherer {
         boolean characterIsInUpperCase = character.matches("[А-ЯЁ]");
         character = character.toLowerCase(); // to ignore case while decyphering
 
-        int positionOfDecypheredCharacterInTheTemplate = template.indexOf(character,32) + keyShift;
+        int positionOfDecypheredCharacterInTheTemplate = template.indexOf(character, 32) + keyShift;
         decypheredCharacter = template.substring(positionOfDecypheredCharacterInTheTemplate,
                                                  positionOfDecypheredCharacterInTheTemplate + 1);
 
