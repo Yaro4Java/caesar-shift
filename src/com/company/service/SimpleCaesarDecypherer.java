@@ -6,6 +6,11 @@ public class SimpleCaesarDecypherer implements CaesarDecypherer {
     public char decypher(char characterToBeDecyphered, int keyShift) {
 
         String character = String.valueOf(characterToBeDecyphered);
+
+        if (!character.matches("[А-Яа-яЁё]")) {
+            return characterToBeDecyphered;
+        }
+
         String decypheredCharacter = null;
 
         String alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
@@ -32,10 +37,7 @@ public class SimpleCaesarDecypherer implements CaesarDecypherer {
         char[] charactersFromMessage = messageToBeDecyphered.toCharArray();
 
         for (int i = 0; i < charactersFromMessage.length; i++) {
-
-            if(String.valueOf(charactersFromMessage[i]).matches("[А-Яа-яЁё]")) {
                 charactersFromMessage[i] = this.decypher(charactersFromMessage[i], keyShift);
-            }
         }
 
         return String.valueOf(charactersFromMessage);
