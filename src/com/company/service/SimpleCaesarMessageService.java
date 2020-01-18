@@ -17,7 +17,7 @@ public class SimpleCaesarMessageService implements CaesarMessageService {
         String template = alphabet + alphabet;
 
         boolean characterIsInUpperCase = character.matches("[А-ЯЁ]");
-        character = character.toLowerCase(); // to ignore case while decyphering
+        character = character.toLowerCase(); // to ignore case while deciphering
 
         int shiftedPositionOfTheCharacterInTheTemplate = template.indexOf(character) + keyShift;
         decipheredCharacter = template.substring(shiftedPositionOfTheCharacterInTheTemplate,
