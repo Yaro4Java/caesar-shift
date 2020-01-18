@@ -3,15 +3,15 @@ package com.company.service;
 public class SimpleCaesarMessageService implements CaesarMessageService {
 
     @Override
-    public char decypher(char characterToBeDecyphered, int keyShift) {
+    public char decipher(char characterToBeDeciphered, int keyShift) {
 
-        String character = String.valueOf(characterToBeDecyphered);
+        String character = String.valueOf(characterToBeDeciphered);
 
         if (!character.matches("[А-Яа-яЁё]")) {
-            return characterToBeDecyphered;
+            return characterToBeDeciphered;
         }
 
-        String decypheredCharacter = null;
+        String decipheredCharacter = null;
 
         String alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
         String template = alphabet + alphabet;
@@ -20,34 +20,34 @@ public class SimpleCaesarMessageService implements CaesarMessageService {
         character = character.toLowerCase(); // to ignore case while decyphering
 
         int shiftedPositionOfTheCharacterInTheTemplate = template.indexOf(character) + keyShift;
-        decypheredCharacter = template.substring(shiftedPositionOfTheCharacterInTheTemplate,
+        decipheredCharacter = template.substring(shiftedPositionOfTheCharacterInTheTemplate,
                                                  shiftedPositionOfTheCharacterInTheTemplate + 1);
 
         if (characterIsInUpperCase) {
-            decypheredCharacter = decypheredCharacter.toUpperCase();
+            decipheredCharacter = decipheredCharacter.toUpperCase();
         }
 
-        return decypheredCharacter.charAt(0);
+        return decipheredCharacter.charAt(0);
     }
 
     @Override
-    public String decypher(String messageToBeDecyphered, int keyShift) {
+    public String decipher(String messageToBeDeciphered, int keyShift) {
 
-        char[] charactersFromMessage = messageToBeDecyphered.toCharArray();
+        char[] charactersFromMessage = messageToBeDeciphered.toCharArray();
 
         for (int i = 0; i < charactersFromMessage.length; i++) {
-                charactersFromMessage[i] = this.decypher(charactersFromMessage[i], keyShift);
+                charactersFromMessage[i] = this.decipher(charactersFromMessage[i], keyShift);
         }
 
         return String.valueOf(charactersFromMessage);
     }
 
     @Override
-    public void decypherIntoConsoleForAllKeyShifts(String messageToBeDecyphered) {
+    public void decipherIntoConsoleForAllKeyShifts(String messageToBeDeciphered) {
 
         for(int keyShift = 1; keyShift < 33; keyShift++) {
             System.out.println("Дешифрованное сообщение ( сдвиг = " + keyShift + " ): \"" +
-                                this.decypher(messageToBeDecyphered, keyShift) + "\"");
+                                this.decipher(messageToBeDeciphered, keyShift) + "\"");
         }
     }
 }

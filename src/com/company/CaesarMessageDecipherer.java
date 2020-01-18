@@ -2,13 +2,13 @@ package com.company;
 
 import com.company.service.SimpleCaesarMessageService;
 
-public class CaesarMessageDecypherer {
+public class CaesarMessageDecipherer {
 
     public static void main(String[] args) {
 
         SimpleCaesarMessageService caesar = new SimpleCaesarMessageService();
 
-        String messageToBeDecyphered = "Еъёчхф Вхзёюлх, адздёиу ф ждэщхб, црбх еёдюэчъщъгюъв южаижжзчх, ждчъёнъгжзчдв." +
+        String messageToBeDeciphered = "Еъёчхф Вхзёюлх, адздёиу ф ждэщхб, црбх еёдюэчъщъгюъв южаижжзчх, ждчъёнъгжзчдв." +
                 " Ъы зёюивй жёхчгюв бюнс ж ъы вдгивъгзхбсгрв аёхкдв. Зъеъёс вгъ дмъчющгд, мзд гъюэцъьгджзс тздшд" +
                 " аёхкх фчбфъзжф жбъщжзчюъв гъждчъёнъгжзчх мъбдчъмъжадшд югщючющиивх. Ф юэимюб чхни южздёюу ю" +
                 " чгыж юэвъгъгюф, здмгъъ дзёхэюч еджздфггиу юэвъгмючджзс мъбдчъмъжаюк едёдадч. Ю зъв гъ въгъъ," +
@@ -17,6 +17,6 @@ public class CaesarMessageDecypherer {
                 " ждэщхггхф щбф юэимъгюф деёъщъбъггрк жздёдг мъбдчъмъжадя щиню. Въгф вдьгд гхэчхзс дзлдв Вхзёюлр," +
                 " х ъы, цъэ еёъичъбюмъгюф, вхзъёсу.";
 
-        caesar.decypherIntoConsoleForAllKeyShifts(messageToBeDecyphered);
+        caesar.decipherIntoConsoleForAllKeyShifts(messageToBeDeciphered);
     }
 }

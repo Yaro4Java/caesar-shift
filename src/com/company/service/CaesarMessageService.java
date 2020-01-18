@@ -2,9 +2,9 @@ package com.company.service;
 
 public interface CaesarMessageService {
 
-    char decypher(char characterToBeDecyphered, int keyShift);
+    char decipher(char characterToBeDeciphered, int keyShift);
 
-    String decypher(String messageToBeDecyphered, int keyShift);
+    String decipher(String messageToBeDeciphered, int keyShift);
 
-    void decypherIntoConsoleForAllKeyShifts(String messageToBeDecyphered);
+    void decipherIntoConsoleForAllKeyShifts(String messageToBeDeciphered);
 }
