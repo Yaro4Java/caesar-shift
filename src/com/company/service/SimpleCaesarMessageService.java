@@ -14,15 +14,14 @@ public class SimpleCaesarMessageService implements CaesarMessageService {
         String decypheredCharacter = null;
 
         String alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-        String template = alphabet + alphabet + alphabet;
-        template = template.substring(1, template.length() - 1);
+        String template = alphabet + alphabet;
 
         boolean characterIsInUpperCase = character.matches("[А-ЯЁ]");
         character = character.toLowerCase(); // to ignore case while decyphering
 
-        int positionOfDecypheredCharacterInTheTemplate = template.indexOf(character, 32) + keyShift;
-        decypheredCharacter = template.substring(positionOfDecypheredCharacterInTheTemplate,
-                                                 positionOfDecypheredCharacterInTheTemplate + 1);
+        int shiftedPositionOfTheCharacterInTheTemplate = template.indexOf(character) + keyShift;
+        decypheredCharacter = template.substring(shiftedPositionOfTheCharacterInTheTemplate,
+                                                 shiftedPositionOfTheCharacterInTheTemplate + 1);
 
         if (characterIsInUpperCase) {
             decypheredCharacter = decypheredCharacter.toUpperCase();
