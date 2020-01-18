@@ -1,6 +1,6 @@
 package com.company.service;
 
-public interface CaesarDecypherer {
+public interface CaesarDecyphererService {
 
     char decypher(char characterToBeDecyphered, int keyShift);
 

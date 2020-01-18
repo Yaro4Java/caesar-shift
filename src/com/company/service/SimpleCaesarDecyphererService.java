@@ -1,6 +1,6 @@
 package com.company.service;
 
-public class SimpleCaesarDecypherer implements CaesarDecypherer {
+public class SimpleCaesarDecyphererService implements CaesarDecyphererService {
 
     @Override
     public char decypher(char characterToBeDecyphered, int keyShift) {

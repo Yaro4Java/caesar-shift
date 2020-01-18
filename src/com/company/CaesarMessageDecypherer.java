@@ -1,12 +1,12 @@
 package com.company;
 
-import com.company.service.SimpleCaesarDecypherer;
+import com.company.service.SimpleCaesarDecyphererService;
 
 public class CaesarMessageDecypherer {
 
     public static void main(String[] args) {
 
-        SimpleCaesarDecypherer caesar = new SimpleCaesarDecypherer();
+        SimpleCaesarDecyphererService caesar = new SimpleCaesarDecyphererService();
 
         String messageToBeDecyphered = "Еъёчхф Вхзёюлх, адздёиу ф ждэщхб, црбх еёдюэчъщъгюъв южаижжзчх, ждчъёнъгжзчдв." +
                 " Ъы зёюивй жёхчгюв бюнс ж ъы вдгивъгзхбсгрв аёхкдв. Зъеъёс вгъ дмъчющгд, мзд гъюэцъьгджзс тздшд" +
