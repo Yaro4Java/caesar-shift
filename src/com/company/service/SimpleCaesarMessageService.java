@@ -45,7 +45,7 @@ public class SimpleCaesarMessageService implements CaesarMessageService {
     @Override
     public void decypherIntoConsoleForAllKeyShifts(String messageToBeDecyphered) {
 
-        for(int keyShift = 1; keyShift <= 32; keyShift++) {
+        for(int keyShift = 1; keyShift < 33; keyShift++) {
             System.out.println("Дешифрованное сообщение ( сдвиг = " + keyShift + " ): \"" +
                                 this.decypher(messageToBeDecyphered, keyShift) + "\"");
         }
